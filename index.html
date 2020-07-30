@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang=pt-br>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <link rel= "stylesheet" type= "text/css" href= "estilo.css" />
+        
+        <title>Trabalho Final</title>
+    </head>
+    <body bgcolor="#525252">
+              
+        <center>
+
+        <div id="mae">
+            <font size="5" face="arial">
+            
+            <br>
+            <a name="topo">         
+            <a href="index.html">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            
+            <a href="dev.html">Dev</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            
+            <a href="comprar.html">Comprar</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            
+            <a href="links.html">Links</a>
+           
+            </font>
+            
+            <br><br><hr>
+
+            <table align="left">
+                <tr>
+                    <td align="left"><td><a href="https://www.vw.com.br" target="_blank"><img src="imagens/logo.jpg" height="80" width="80"></a></td>
+                    <td align="left"><h1><font face="arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Home</font></h1></td>
+                </tr>
+            </table>
+
+            <img src="imagens/tcross_04.jpg" height="300" width="1000">
+            
+            <br><br>
+
+            <font face="arial" size="4">
+            <p>O T-Cross será o primeiro modelo em seu segmento no Brasil a oferecer o “Manual Cognitivo”, 
+                que usa a tecnologia IBM Watson para responder ao motorista questões sobre o veículo, 
+                incluindo informações contidas no manual do carro. Mais que um SUV. Um SUVW.</p>
+            </font>
+
+            <br><br><br><br>
+            
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/wavFUTp9dU0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <br><br><br><br>
+
+           <table align="left">
+                <tr>
+                    
+                    <td onclick="mostra_foto(1)"><img id="myImg" src="imagens/banco.jpg" alt="O pacote Design View agrega bancos de couro com detalhes na cor “Marrakesh Brown” e apliques decorativos no painel com detalhes na cor bronze namíbia." height="300" width="350"></td>
+                    <td width="20">
+                        
+                    </td>
+                    <td>
+                        <font>
+                            <p>O pacote Design View agrega bancos de couro com detalhes na cor “Marrakesh Brown” e apliques decorativos</p>
+                            <p>no painel com detalhes na cor bronze namíbia.</p>
+                        </font>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td onclick="mostra_foto(2)"><img id="myImg" src="imagens/airbag.jpg" alt="O T-cross contem 6 airbags, sendo frontal, lateral para a cabeça e cortina lateral, tanto para o motorista quanto para o passageiro." height="300" width="350"></td>
+                    <td width="20">
+                        
+                    </td>
+                    <td>
+                        <font>
+                            <p>O T-cross contem 6 airbags, sendo frontal, lateral para a cabeça e cortina lateral, tanto para o motorista quanto para o passageiro.</p>
+                        </font>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td onclick="mostra_foto(3)"><img id="myImg" src="imagens/gps.jpg" alt="O App-Connect, instalado no carro, disponível para o Composition Touch e Discover Media, torna o seu dia-a-dia mais prático e agradável com as principais funções do seu smartphone acessíveis por voz e na tela do sistema infotainment." height="300" width="350"></td>
+                    <td width="20">
+                        
+                    </td>
+                    <td>
+                        <font>
+                            <p>O App-Connect, instalado no carro, disponível para o Composition Touch e Discover Media, torna o seu dia-a-dia mais prático e agradável com as principais funções do seu smartphone acessíveis por voz e na tela do sistema infotainment.</p>
+                        </font>
+                    </td>
+                </tr>
+            </table>
+
+            <!-- The Modal -->
+            <div id="myModal1" class="modal">
+              <span class="close">&times;</span>
+              <img class="modal-content" id="img01">
+              <div id="caption"></div>
+            </div>
+            <script>
+            // Get the modal
+            var modal = document.getElementById("myModal1");
+
+            // Get the image and insert it inside the modal - use its "alt" text as a caption
+            var img = document.getElementById("myImg");
+            var modalImg = document.getElementById("img01");
+            var captionText = document.getElementById("caption");
+
+            function mostra_foto(num){
+                modal.style.display = "block";
+                if(num == 1){
+                    modalImg.src = "./imagens/banco.jpg";
+                    captionText.innerHTML = "O pacote Design View agrega bancos de couro com detalhes na cor “Marrakesh Brown” e apliques decorativos no painel com detalhes na cor bronze namíbia.";
+                }
+                else if (num == 2){
+                    modalImg.src = "./imagens/airbag.jpg";
+                    captionText.innerHTML = "O T-cross contem 6 airbags, sendo frontal, lateral para a cabeça e cortina lateral, tanto para o motorista quanto para o passageiro.";
+                } else if (num == 3){
+                    modalImg.src = "./imagens/gps.jpg";
+                    captionText.innerHTML = "O App-Connect, instalado no carro, disponível para o Composition Touch e Discover Media, torna o seu dia-a-dia mais prático e agradável com as principais funções do seu smartphone acessíveis por voz e na tela do sistema infotainment.";
+                }
+            }
+            /*img.onclick = function(){
+              modal.style.display = "block";
+              modalImg.src = this.src;
+              captionText.innerHTML = this.alt;
+            }*/
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() { 
+              modal.style.display = "none";
+            }
+            //-----------------------------------------------------------------------------------
+
+            </script>
+            
+            <button style="font-size: 20px;"><a href="#topo">Voltar para o topo</a></button>
+
+            <br><hr><br>
+
+            <font size="5" face="arial">
+            <a href="index.html">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            
+            <a href="dev.html">Dev</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            
+            <a href="comprar.html">Comprar</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            
+            <a href="links.html">Links</a>
+
+            <br><br>
+            </font>
+        </div>    
+
+        </center>
+
+        <center>
+            <br>
+            <font size="2" style="color: white;">
+            <p>07 Caio Piccaluga Gomes da Silva 72B</p>
+            <p>08 Diego Carvalho Rodrigues 72B</p>
+            <p>Colégio Técnico Industrial</p>
+            <p>Unesp Bauru SP</p>
+            </font><br>
+        </center>
+
+    </body>
+</html>
